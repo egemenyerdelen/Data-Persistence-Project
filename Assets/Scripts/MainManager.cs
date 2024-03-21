@@ -77,16 +77,14 @@ public class MainManager : MonoBehaviour
             DataManager.Instance.SaveHighScore();
             DataManager.Instance.SaveNickname();
         }
-        
         if (DataManager.Instance.secondScore > m_Points && DataManager.Instance.secondScore < DataManager.Instance.highScore)
         {
             DataManager.Instance.secondScore = m_Points;
             DataManager.Instance.secondNickname = DataManager.Instance.currentNickname;
             DataManager.Instance.SaveHighScore();
             DataManager.Instance.SaveNickname();
-
         }
-        
+
         m_GameOver = true;
         GameOverText.SetActive(true);
     }
